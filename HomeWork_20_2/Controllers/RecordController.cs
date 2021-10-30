@@ -19,7 +19,7 @@ namespace HomeWork_20.Controllers
            return View(phoneBook);
         }
 
-        public RedirectToActionResult ViewRecord(int id, string returnUrl)
+        public RedirectToActionResult ViewRecord(int id)
         {
             PhoneBook phoneBook = repository.PhoneBooks
                 .FirstOrDefault(p => p.Id == id);
