@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div class="navbar navbar-inverse bg-inverse" role="navigation">
-        <a class="navbar-brand">Записная книжка</a>
-    </div>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        <div class="navbar bg-light" role="navigation">
+            <a class="navbar-brand">Записная книжка</a>
+        </div>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
     </div>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
