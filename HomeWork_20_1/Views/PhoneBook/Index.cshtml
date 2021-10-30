@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Записная книжка";
+}
+@model IEnumerable<PhoneBook>
+@foreach (var p in Model)
+{
+    <div class="card card-outline-primary m-1 p-1">
+        <div>@p.Id   @p.LastName @p.FirstName @p.ThreeName</div>
+    </div>
+}
