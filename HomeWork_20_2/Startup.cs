@@ -46,6 +46,7 @@ namespace HomeWork_20
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=PhoneBook}/{action=Index}/{id?}");
+                routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
         }
     }

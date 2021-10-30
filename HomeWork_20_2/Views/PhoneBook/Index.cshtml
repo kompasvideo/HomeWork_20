@@ -5,6 +5,21 @@
 @foreach (var p in Model)
 {
     <div class="card card-outline-primary m-1 p-1">
-        <div>@p.Id   @p.LastName @p.FirstName @p.ThreeName</div>
+        <div>
+            <form id="@p.Id" asp-action="ViewRecord"
+                  asp-controller="Record" method="post">
+                <input type="hidden" name="id" 
+                       value="@p.Id"/>
+                <input type="hidden" name="returnUrl"
+                       value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+                <span class="card-text p-1">
+                    <button type="submit"
+                            class="btn btn-success btn-sm">
+                        @p.Id
+                    </button>
+                </span>
+                @p.LastName @p.FirstName @p.ThreeName
+            </form>            
+        </div>
     </div>
 }
